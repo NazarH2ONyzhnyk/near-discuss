@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEAR Discuss</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <link rel="icon" href="./img/near-title.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="relative z-10 w-full bg-white">
+        <div class="container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32">
+            <nav class="flex items-center justify-between py-4">
+                
+                <!-- Logo -->
+                <div class="">
+                    <a href="#" class="flex items-center">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600">
+                            <img src="./img/NEAR.png" alt="">
+                        </div>
+                        <span class="mx-2 h-9 w-0.5 bg-black"></span>
+                        <p class="text-black text-xl font-bold mali">Discuss</p>
+                    </a>
+                </div>
+                
+
+                <!-- Buttons -->
+                <div class="flex items-center space-x-5">
+
+                    <!-- My account btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center w-56 h-12 rounded-full border-2 border-yellow-600 hover:border-purple-600 bg-purple-600 text-base font-bold text-yellow-600 hover:bg-yellow-600 hover:text-purple-600 transform active:scale-95 duration-100">
+                        <img src="./img/Decoration/devoto.png" alt="" class="mb-3 mr-2 mt-1 w-7 h-7">
+                        <p class="">Discover Disscus</p>
+                    </a>
+
+                    <!-- Create post btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center space-x-2 w-56 h-12 rounded-full border-2 border-purple-600 hover:border-yellow-600 text-base font-bold text-purple-600 hover:text-yellow-600 bg-yellow-600 hover:bg-purple-600 transform active:scale-95 duration-100">
+                        <img src="./img/loving.png" alt="" class="w-7 h-7 mb-2">
+                        <p class="">Create a post</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 11H13V5C13 4.73478 12.8946 4.48043 12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289C11.1054 4.48043 11 4.73478 11 5V11H5C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13H11V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20C12.2652 20 12.5196 19.8946 12.7071 19.7071C12.8946 19.5196 13 19.2652 13 19V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <!-- Create post btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center space-x-2 w-56 h-12 rounded-full border-2 text-base font-bold text-red-600 border-red-600 hover:text-white hover:bg-red-600 transform active:scale-95 duration-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5.2314 2.98938C3.99317 2.98938 2.98938 3.99317 2.98938 5.2314V18.6835C2.98938 19.9218 3.99317 20.9256 5.2314 20.9256H13.0785C14.3167 20.9256 15.3205 19.9218 15.3205 18.6835V17.9362C15.3205 17.5234 14.9859 17.1888 14.5732 17.1888C14.1604 17.1888 13.8258 17.5234 13.8258 17.9362V18.6835C13.8258 19.0963 13.4912 19.4309 13.0785 19.4309H5.2314C4.81866 19.4309 4.48406 19.0963 4.48406 18.6835V5.2314C4.48406 4.81866 4.81866 4.48406 5.2314 4.48406H13.0785C13.4912 4.48406 13.8258 4.81866 13.8258 5.2314V5.97874C13.8258 6.39149 14.1604 6.72608 14.5732 6.72608C14.9859 6.72608 15.3205 6.39149 15.3205 5.97874V5.2314C15.3205 3.99317 14.3167 2.98938 13.0785 2.98938H5.2314Z" fill="currentColor"/>
+                            <path d="M10.9593 9.52668C11.2678 9.25247 11.2956 8.78009 11.0214 8.47161C10.7471 8.16312 10.2748 8.13533 9.96629 8.40954L5.97486 11.9575L9.96629 15.5054C10.2748 15.7796 10.7471 15.7518 11.0214 15.4433C11.2956 15.1349 11.2678 14.6625 10.9593 14.3883L9.06542 12.7048H18.6835C19.0963 12.7048 19.4309 12.3702 19.4309 11.9575C19.4309 11.5447 19.0963 11.2101 18.6835 11.2101H9.06542L10.9593 9.52668Z" fill="currentColor"/>
+                        </svg>
+                        <p class="">Logout</p>
+                    </a>
+
+                    <!-- Notification -->
+                    <a href="#" class="flex items-center justify-center space-x-2 h-12 rounded-full text-sm md:text-base font-bold text-purple-600 hover:text-purple-600 transform active:scale-95 duration-100">
+                        Notification
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-yellow-600 hover:text-purple-600 w-4 h-5 md:w-6 md:h-7" viewBox="0 0 24 28" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.875 2.01281C13.875 2.05985 13.873 2.10645 13.8692 2.15256C19.074 2.97563 20.9921 7.33519 20.9921 12.5897C20.9921 14.9272 21.305 18.4303 22.2543 20.1051L23.1219 21.6358C23.5205 22.3391 22.9408 23.1665 22.0495 23.1665H1.95049C1.05922 23.1665 0.479534 22.3391 0.878122 21.6358L1.74569 20.1051C3.1001 17.7155 3.07562 16.511 3.02825 14.1806C3.01856 13.704 3.00792 13.1803 3.00792 12.5897C3.00792 7.33519 4.92596 2.97563 10.1308 2.15256C10.127 2.10645 10.125 2.05985 10.125 2.01281C10.125 1.03924 10.9645 0.25 12 0.25C13.0355 0.25 13.875 1.03924 13.875 2.01281ZM10.5213 4.62188L12 4.38805L13.4787 4.62188C15.3667 4.92043 16.5059 5.79641 17.2492 7.0128C18.053 8.32837 18.4921 10.2221 18.4921 12.5897C18.4921 13.8543 18.5758 15.4348 18.7924 16.9497C18.9631 18.1436 19.2438 19.5116 19.7464 20.6665H4.28363C4.84329 19.5755 5.19175 18.5912 5.3746 17.5551C5.57491 16.42 5.55224 15.3194 5.53014 14.2472L5.52774 14.1298C5.51802 13.6519 5.50792 13.1517 5.50792 12.5897C5.50792 10.2221 5.94702 8.32837 6.75085 7.0128C7.49408 5.79641 8.63332 4.92043 10.5213 4.62188Z" fill="currentColor"/>
+                            <path d="M11.9996 27.7508C13.5529 27.7508 14.8121 26.4557 14.8121 24.858C14.8121 24.6406 14.7888 24.4289 14.7446 24.2252H9.25461C9.21043 24.4289 9.18712 24.6406 9.18712 24.858C9.18712 26.4557 10.4463 27.7508 11.9996 27.7508Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+
+                    <!-- Mobile menu -->
+                    <a href="#" class="xl:hidden flex items-center text-purple-600">
+                        <p>menu</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="20" height="20" viewBox="0 0 40 40" fill="none">
+                            <path d="M17.5 10C17.5 8.61929 18.6193 7.5 20 7.5C21.3807 7.5 22.5 8.61929 22.5 10C22.5 11.3807 21.3807 12.5 20 12.5C18.6193 12.5 17.5 11.3807 17.5 10Z" fill="currentColor"/>
+                            <path d="M17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C21.3807 17.5 22.5 18.6193 22.5 20C22.5 21.3807 21.3807 22.5 20 22.5C18.6193 22.5 17.5 21.3807 17.5 20Z" fill="currentColor"/>
+                            <path d="M20 27.5C18.6193 27.5 17.5 28.6193 17.5 30C17.5 31.3807 18.6193 32.5 20 32.5C21.3807 32.5 22.5 31.3807 22.5 30C22.5 28.6193 21.3807 27.5 20 27.5Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    
+
+                </div>
+    
+            </nav>
+        </div>
+    </div>
+
+    <!-- Offer -->
+    <section class="relative w-full bg-purple-600 text-white py-10  ">
+        <div class="container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32">
+            <div class="block md:flex  md:space-x-20">
+
+                <!-- Account name -->
+                <div class="flex flex-col items-center">
+                    <div class="w-20 h-20 flex items-center justify-center bg-white rounded-full">
+                        <img src="./img/near_logo_stack 2.png" alt="" class="">
+                    </div>
+                    <p class="text-yellow-600 text-xl font-bold mt-3">oliinykk.near</p>
+                </div>
+
+                <!-- Account info -->
+                <div class="flex flex-col lg:flex-row md:items-start lg:items-start space-x-0 lg:space-x-14 space-y-10 md:space-y-0 mt-5 md:mt-0">
+
+                    <!-- Your actions -->
+                    <div class="">
+                        <h2 class="text-3xl ml-1">Your actions</h2>
+                        <hr class="w-full bg-white my-3">
+                        <div class="ml-1 flex items-center space-x-5 sm:space-x-10">
+
+                            <!-- posts -->
+                            <div class="">
+                                <p class="text-lg">posts</p>
+                                <h6 class="text-3xl text-yellow-600">122</h6>
+                            </div>
+                            
+                            <!-- likes -->
+                            <div class="">
+                                <p class="text-lg">likes</p>
+                                <h6 class="text-3xl text-yellow-600">12k</h6>
+                            </div>
+
+                            <!-- comments -->
+                            <div class="">
+                                <p class="text-lg">comments</p>
+                                <h6 class="text-3xl text-yellow-600">4k</h6>
+                            </div>
+
+                            <!-- answers -->
+                            <div class="">
+                                <p class="text-lg">answers</p>
+                                <h6 class="text-3xl text-yellow-600">345</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Reader actions -->
+                    <div class="">
+                        <h2 class="text-3xl ml-1">Reader actions</h2>
+                        <hr class="w-full bg-white my-3">
+                        <div class="ml-1 flex items-center space-x-5 sm:space-x-10">
+
+                            <!-- likes -->
+                            <div class="">
+                                <p class="text-lg">likes</p>
+                                <h6 class="text-3xl text-yellow-600">12k</h6>
+                            </div>
+
+                            <!-- comments -->
+                            <div class="">
+                                <p class="text-lg">comments</p>
+                                <h6 class="text-3xl text-yellow-600">4k</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="relative w-full mt-10    md:mt-12 xl:mt-16 2xl:mt-16">
+
+        <!-- Decoration -->
+        <img src="./img/Decoration/skull.png" alt="" class="z-10 absolute top-44">
+        <img src="./img/Decoration/butto.png" alt="" class="z-10 absolute top-96 mt-96">
+        <img src="./img/Decoration/cry.png" alt="" class="z-10 absolute top-96 right-0">
+        <img src="./img/Decoration/mad.png" alt="" class="z-10 absolute bottom-96 right-5">
+
+
+        <div class="relative z-20 container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32">
+            
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-center lg:justify-start space-y-5 md:space-y-0 space-x-0 md:space-x-10">
+
+                <!-- Title -->
+                <a href="#" class=" flex justify-center pb-5 items-center border-b-2 border-yellow-600">
+                    <h2 class="text-4xl lg:opacity-100 lg:text-5xl text-purple-600">Posts</h2>
+                    <img src="./img/screamboto-big.png" alt="screambot-big" class="w-11 h-11 ml-4">
+                </a>
+    
+                <!-- Title -->
+                <a href="#" class="flex justify-center items-center opacity-50 hover:opacity-100">
+                    <h2 class="text-4xl lg:opacity-100 lg:text-5xl text-purple-600">Draft</h2>
+                    <img src="./img/Decoration/devoto.png" alt="screambot-big" class="w-11 h-12 ml-4 pb-1">
+                </a>
+                
+            </div>
+
+            <!-- All posts -->
+            <div class="flex flex-col md:flex-row justify-between space-x-0 md:space-x-4 lg:space-x-6">
+
+                <!-- Left col -->
+                <div class="w-full md:w-1/2">
+
+                    <!-- One post (JUST WITH TEXT) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-1 md:space-x-3 lg:space-x-4">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-1 md:space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-3 h-3 sm:w-5 sm:h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-3 h-3msm:w-5 sm:h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-5 leading-normal">
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                </p>
+                                
+                                
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-3 text-gray-300 space-x-4">
+                                    
+                            <!-- Like -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+
+                            <!-- Dislike -->
+                            <a href="#" class="flex items-center hover:text-red-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+                            
+                            <!-- Comments -->
+                            <a href="#" class="flex items-center hover:text-yellow-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                    <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                    <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                            </a>
+
+                            <!-- Views -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- One post (TEXT AND IMAGE) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-2">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Post img -->
+                                <div class="mt-9">
+                                    <img src="./img/photo.png" alt="" class="w-full">
+                                </div>
+
+
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-4 leading-normal">
+                                    Bitcoin really more sexy than US Dollar. Hopefully that govermants understand this soon!
+                                </p>
+
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-6 lg:mt-7 xl:mt-8 2xl:mt-10 text-gray-300 space-x-4">
+                                    
+                            <!-- Like -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+
+                            <!-- Dislike -->
+                            <a href="#" class="flex items-center hover:text-red-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+                            
+                            <!-- Comments -->
+                            <a href="#" class="flex items-center hover:text-yellow-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                    <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                    <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                            </a>
+
+                            <!-- Views -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- One post (TEXT AND IMAGE) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-2">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Post img -->
+                                <div class="mt-9">
+                                    <img src="./img/photo.png" alt="" class="w-full">
+                                </div>
+
+
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-4 leading-normal">
+                                    Bitcoin really more sexy than US Dollar. Hopefully that govermants understand this soon!
+                                </p>
+
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-6 lg:mt-7 xl:mt-8 2xl:mt-10 text-gray-300 space-x-4">
+                                    
+                           <!-- Like -->
+                           <a href="#" class="flex items-center hover:text-purple-600">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                            </svg>
+
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                        </a>
+
+                        <!-- Dislike -->
+                        <a href="#" class="flex items-center hover:text-red-600">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                        </a>
+                        
+                        <!-- Comments -->
+                        <a href="#" class="flex items-center hover:text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                        </a>
+
+                        <!-- Views -->
+                        <a href="#" class="flex items-center hover:text-purple-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                        </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right col -->
+                <div class="w-full md:w-1/2">
+
+                    <!-- One post (TEXT AND IMAGE) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-2">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Post img -->
+                                <div class="mt-9">
+                                    <img src="./img/photo.png" alt="" class="w-full">
+                                </div>
+
+
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-4 leading-normal">
+                                    Bitcoin really more sexy than US Dollar. Hopefully that govermants understand this soon!
+                                </p>
+
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-6 lg:mt-7 xl:mt-8 2xl:mt-10 text-gray-300 space-x-4">
+                                    
+                            <!-- Like -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+
+                            <!-- Dislike -->
+                            <a href="#" class="flex items-center hover:text-red-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+                            
+                            <!-- Comments -->
+                            <a href="#" class="flex items-center hover:text-yellow-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                    <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                    <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                            </a>
+
+                            <!-- Views -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- One post (JUST WITH TEXT) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-4">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-5 leading-normal">
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                </p>
+
+                                
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-3 text-gray-300 space-x-4">
+                                    
+                           <!-- Like -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+
+                            <!-- Dislike -->
+                            <a href="#" class="flex items-center hover:text-red-600">
+                                <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                    <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                            </a>
+                            
+                            <!-- Comments -->
+                            <a href="#" class="flex items-center hover:text-yellow-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                    <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                    <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                            </a>
+
+                            <!-- Views -->
+                            <a href="#" class="flex items-center hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                                </svg>
+                                <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    
+                    <!-- One post (JUST WITH TEXT) -->
+                    <div class="bg-white post-shadow rounded-xl pt-9 pb-5 px-4 mt-6 2xl:mt-12">
+                        
+                        <div class="flex space-x-4">
+
+                            <!-- Post info -->
+                            <div class="w-full">
+
+                                <div class="flex items-center space-x-2 md:space-x-3 lg:space-x-4">
+                                    
+                                    <!-- Popular reactions -->
+                                    <div class="flex items-center space-x-2">
+                                        <img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                        <img src="./img/partyboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9">
+                                    </div>
+
+                                    <!-- Post writer -->
+                                    <div class="">
+                                        <p class="text-purple-600 text-xs xl:text-lg 2xl:text-xl- font-semibold">nazarh2onyzhnyk<span class="text-black">.near</span></p>
+                                    </div>
+
+                                    <!-- Post data -->
+                                    <div class="">
+                                        <p class="text-gray-300 text-xxs xl:text-base 2xl:text-lg">posted 4.11.2021 <span class="ml-2">17:13</span></p>
+                                    </div>
+
+                                </div>
+
+                                <!-- Post title -->
+                                <p class="text-sm lg:text-base xl:text-2xl 2xl:text-3xl font-bold text-black mt-5 leading-normal">
+                                    Astroworld Festival tragedy: 9-year-old Ezra Blount injured at Travis Scott concert dies from his injuries
+                                </p>
+
+                                
+                            </div>
+
+                            <!-- Owner actions -->
+                            <div class="flex items-start space-x-2">
+
+                                <!-- Edit post -->
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2108 2.87816C10.8017 2.28733 11.7596 2.28733 12.3504 2.87816L13.2598 3.78751C13.8506 4.37835 13.8506 5.33628 13.2598 5.92712L6.29761 12.8893L3.15946 13.9353C2.56809 14.1325 2.00548 13.5699 2.2026 12.9785L3.24865 9.84034L10.2108 2.87816ZM11.6372 3.59137C11.4403 3.39442 11.121 3.39442 10.924 3.59137L10.242 4.27338L11.8646 5.89593L12.5466 5.21392C12.7435 5.01697 12.7435 4.69766 12.5466 4.50071L11.6372 3.59137ZM11.1514 6.60913L9.52882 4.98658L4.40264 10.1128L6.02519 11.7353L11.1514 6.60913ZM5.09159 12.2281L3.90982 11.0464L3.31894 12.819L5.09159 12.2281Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600 hover:text-purple-600 mb-1 w-4 lg:w-5 h-4 lg:h-5 xl:w-6 xl:h-6" viewBox="0 0 17 17" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.92242 3.02586C7.6439 3.02586 7.41811 3.25164 7.41811 3.53017H10.444C10.444 3.25164 10.2182 3.02586 9.93966 3.02586H7.92242ZM11.4526 3.53017C11.4526 2.6946 10.7752 2.01723 9.93966 2.01723H7.92242C7.08685 2.01723 6.40949 2.6946 6.40949 3.53017H4.39225C4.11373 3.53017 3.88794 3.75595 3.88794 4.03448C3.88794 4.313 4.11373 4.53879 4.39225 4.53879H13.4698C13.7484 4.53879 13.9741 4.313 13.9741 4.03448C13.9741 3.75595 13.7484 3.53017 13.4698 3.53017H11.4526Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.63801 7.06137C7.91596 7.04355 8.15573 7.25443 8.17354 7.53239L8.4257 11.466C8.44352 11.744 8.23264 11.9837 7.95468 12.0015C7.67673 12.0194 7.43696 11.8085 7.41914 11.5305L7.16699 7.59691C7.14917 7.31896 7.36005 7.07919 7.63801 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2241 7.06137C9.94613 7.04355 9.70636 7.25443 9.68854 7.53239L9.43639 11.466C9.41857 11.744 9.62945 11.9837 9.9074 12.0015C10.1854 12.0194 10.4251 11.8085 10.4429 11.5305L10.6951 7.59691C10.7129 7.31896 10.502 7.07919 10.2241 7.06137Z" fill="currentColor"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.43157 5.89339C4.37514 5.44189 4.72718 5.0431 5.1822 5.0431H12.6799C13.1349 5.0431 13.4869 5.44189 13.4305 5.89339L12.5678 12.7954C12.4731 13.5525 11.8295 14.1207 11.0665 14.1207H6.79557C6.03257 14.1207 5.38896 13.5525 5.29433 12.7954L4.43157 5.89339ZM5.46783 6.05172L6.29516 12.6703C6.3267 12.9227 6.54124 13.1121 6.79557 13.1121H11.0665C11.3208 13.1121 11.5354 12.9227 11.5669 12.6703L12.3943 6.05172H5.46783Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Reactions -->
+                            <!-- <div class="ml-auto flex flex-col items-center">
+                                <p class="text-purple-600 text-center text-xxs xl:text-base 2xl:text-lg">quick <br> reactions</p>
+                                <a href="#" class="mt-3 "><img src="./img/heart-eyes.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/screamboto.png" alt="" class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/partyboto.png" alt=""  class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                                <a href="#" class="mt-3 "><img src="./img/cry.png" alt=""        class="w-5 h-5 lg:w-6 lg:h-6 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9"></a>
+                            </div> -->
+                        </div>
+
+                        <!-- Interact with post (TEXT VERSION)-->
+                        <div class="flex items-center mt-3 text-gray-300 space-x-4">
+                                    
+                           <!-- Like -->
+                           <a href="#" class="flex items-center hover:text-purple-600">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                            </svg>
+
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                        </a>
+
+                        <!-- Dislike -->
+                        <a href="#" class="flex items-center hover:text-red-600">
+                            <svg xmlns="http://www.w3.org/2000/svg"  class="transform rotate-180 mr-2 mb-1 w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 2xl:w-6 2xl:h-6" width="24" height="29" viewBox="0 0 24 29" fill="none">
+                                <path d="M12.7228 2.42381L12.7227 2.42361C12.4453 2.12038 12.0505 1.93481 11.6206 1.93481C11.185 1.93481 10.7918 2.1258 10.5185 2.42457L10.5173 2.42591L1.61345 12.1935C1.61318 12.1938 1.61292 12.1941 1.61265 12.1944C1.20184 12.6442 1.10312 13.2807 1.30619 13.8199H1.30618L1.30781 13.8241C1.51843 14.3762 2.04881 14.8103 2.71551 14.8103H6.56082V25.9465C6.56082 26.7128 7.15031 27.4998 8.07245 27.4998H15.2151C16.1372 27.4998 16.7267 26.7128 16.7267 25.9465V14.8102H20.5533C21.2236 14.8102 21.7518 14.3715 21.961 13.8231C22.1709 13.273 22.0602 12.6371 21.6544 12.1935L12.7228 2.42381Z" fill="currentColor" stroke="currentColor" stroke-width="2.13041"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">10.2k</p>
+                        </a>
+                        
+                        <!-- Comments -->
+                        <a href="#" class="flex items-center hover:text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                <path d="M11.1562 15.9375C12.0365 15.9375 12.75 15.224 12.75 14.3438C12.75 13.4635 12.0365 12.75 11.1562 12.75C10.276 12.75 9.5625 13.4635 9.5625 14.3438C9.5625 15.224 10.276 15.9375 11.1562 15.9375Z" fill="currentColor"/>
+                                <path d="M18.5938 14.3438C18.5938 15.224 17.8802 15.9375 17 15.9375C16.1198 15.9375 15.4062 15.224 15.4062 14.3438C15.4062 13.4635 16.1198 12.75 17 12.75C17.8802 12.75 18.5938 13.4635 18.5938 14.3438Z" fill="currentColor"/>
+                                <path d="M22.8438 15.9375C23.724 15.9375 24.4375 15.224 24.4375 14.3438C24.4375 13.4635 23.724 12.75 22.8438 12.75C21.9635 12.75 21.25 13.4635 21.25 14.3438C21.25 15.224 21.9635 15.9375 22.8438 15.9375Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4375 4.25C5.67709 4.25 4.25 5.67709 4.25 7.4375V21.25C4.25 23.0104 5.67709 24.4375 7.4375 24.4375H9.56251V28.1025C9.56251 29.496 11.2249 30.2184 12.2437 29.2676L17.4188 24.4375H26.5625C28.3229 24.4375 29.75 23.0104 29.75 21.25V7.4375C29.75 5.67709 28.3229 4.25 26.5625 4.25H7.4375ZM6.375 7.4375C6.375 6.8507 6.8507 6.375 7.4375 6.375H26.5625C27.1493 6.375 27.625 6.8507 27.625 7.4375V21.25C27.625 21.8368 27.1493 22.3125 26.5625 22.3125H17.2094C16.8057 22.3125 16.4171 22.4657 16.122 22.7411L11.6875 26.88V23.9062C11.6875 23.026 10.974 22.3125 10.0938 22.3125H7.4375C6.8507 22.3125 6.375 21.8368 6.375 21.25V7.4375Z" fill="currentColor"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Comments</p>
+                        </a>
+
+                        <!-- Views -->
+                        <a href="#" class="flex items-center hover:text-purple-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 mb-1 w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.2501 17C21.2501 19.3472 19.3473 21.25 17.0001 21.25C14.6529 21.25 12.7501 19.3472 12.7501 17C12.7501 14.6528 14.6529 12.75 17.0001 12.75C19.3473 12.75 21.2501 14.6528 21.2501 17ZM17.0001 15.9375C17.0001 16.5243 16.5244 17 15.9376 17C15.3508 17 14.8751 16.5243 14.8751 15.9375C14.8751 15.3507 15.3508 14.875 15.9376 14.875C16.5244 14.875 17.0001 15.3507 17.0001 15.9375Z" fill="currentColor"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0001 9.5625C10.7253 9.5625 7.2155 13.8872 5.67 16.1456C5.34574 16.6194 5.29243 17.2522 5.58938 17.7869C6.92045 20.1836 10.7743 24.4375 17.0001 24.4375C23.2977 24.4375 27.1689 20.0855 28.4583 17.7C28.6683 17.3116 28.7113 16.834 28.5336 16.395C27.9973 15.0703 26.645 13.3781 24.7153 12.022C22.7602 10.648 20.1345 9.5625 17.0001 9.5625ZM17.0001 22.3125C12.0657 22.3125 8.87621 19.0869 7.62442 17.0574C9.14189 14.9171 12.0602 11.6875 17.0001 11.6875C19.6288 11.6875 21.8358 12.5956 23.4935 13.7606C25.0188 14.8325 26.0163 16.0764 26.4481 16.9379C25.2536 18.9526 22.0357 22.3125 17.0001 22.3125Z" fill="currentColor"/>
+                            </svg>
+                            <p class="text-xxs lg:text-xs xl:text-sm 2xl:text-lg">Views 174.5k</p>
+                        </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Loader -->
+            <div class="flex justify-center py-10">
+                <img src="./img/gradient loader.png" alt="" class="animate-spin">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-near-100">
+        <div class="container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32 mt-20">
+            <div class="flex flex-col md:flex-row">
+
+                <div class="flex flex-col">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600">
+                            <img src="./img/NEAR.png" alt="">
+                        </div>
+                        <span class="mx-2 h-9 w-0.5 bg-black"></span>
+                        <p class="text-black text-xl font-bold mali">Discuss</p>
+                    </a>
+                    <a href="#" class="mt-1">
+                        info@neardiscuss
+                    </a>
+                    <a href="#" class="mt-1">
+                        1-232-3434 (Main)
+                    </a>
+                </div>
+
+                <div class="w-auto md:ml-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-14 lg:gap-x-28 xl:gap-x-40 gap-y-10">
+                    <!-- About -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">About</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="./alert-successful.html" class="hover:text-black font-medium">About contract</a></li>
+                        <li><a href="./alert-failed.html" class="hover:text-black font-medium">About NEAR </a></li>
+                        <li><a href="" class="hover:text-black font-medium">About NEAR ecosystem</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">Community</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="" class="hover:text-black font-medium">Community OS Wiki</a></li>
+                        <li><a href="" class="hover:text-black font-medium">Forum</a></li>
+                        <li><a href="" class="hover:text-black font-medium">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">Help</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="" class="hover:text-black font-medium">Support</a></li>
+                        <li><a href="" class="hover:text-black font-medium">info@neardiscuss</a></li>
+                        <li><a href="" class="hover:text-black font-medium">1-232-3434 (Main)</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center my-10">
+                <p class="">© 2021 NEAR Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

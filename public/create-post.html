@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEAR Discuss</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <link rel="icon" href="./img/near-title.png">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="relative z-10 w-full bg-white">
+        <div class="container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32">
+            <nav class="flex items-center justify-between py-4">
+                
+                <!-- Logo -->
+                <div class="">
+                    <a href="#" class="flex items-center">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600">
+                            <img src="./img/NEAR.png" alt="">
+                        </div>
+                        <span class="mx-2 h-9 w-0.5 bg-black"></span>
+                        <p class="text-black text-xl font-bold mali">Discuss</p>
+                    </a>
+                </div>
+                
+
+                <!-- Buttons -->
+                <div class="flex items-center space-x-5">
+
+                    <!-- My account btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center w-56 h-12 rounded-full border-2 border-yellow-600 hover:border-purple-600 bg-purple-600 text-base font-bold text-yellow-600 hover:bg-yellow-600 hover:text-purple-600 transform active:scale-95 duration-100">
+                        <img src="./img/Decoration/devoto.png" alt="" class="mb-3 mr-2 mt-1 w-7 h-7">
+                        <p class="">Discover Disscus</p>
+                    </a>
+
+                    <!-- Create post btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center space-x-2 w-56 h-12 rounded-full border-2 border-purple-600 hover:border-yellow-600 text-base font-bold text-purple-600 hover:text-yellow-600 bg-yellow-600 hover:bg-purple-600 transform active:scale-95 duration-100">
+                        <img src="./img/loving.png" alt="" class="w-7 h-7 mb-2">
+                        <p class="">Create a post</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 11H13V5C13 4.73478 12.8946 4.48043 12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289C11.1054 4.48043 11 4.73478 11 5V11H5C4.73478 11 4.48043 11.1054 4.29289 11.2929C4.10536 11.4804 4 11.7348 4 12C4 12.2652 4.10536 12.5196 4.29289 12.7071C4.48043 12.8946 4.73478 13 5 13H11V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20C12.2652 20 12.5196 19.8946 12.7071 19.7071C12.8946 19.5196 13 19.2652 13 19V13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5196 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <!-- Create post btn -->
+                    <a href="#" class="hidden xl:flex items-center justify-center space-x-2 w-56 h-12 rounded-full border-2 text-base font-bold text-red-600 border-red-600 hover:text-white hover:bg-red-600 transform active:scale-95 duration-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mb-1" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M5.2314 2.98938C3.99317 2.98938 2.98938 3.99317 2.98938 5.2314V18.6835C2.98938 19.9218 3.99317 20.9256 5.2314 20.9256H13.0785C14.3167 20.9256 15.3205 19.9218 15.3205 18.6835V17.9362C15.3205 17.5234 14.9859 17.1888 14.5732 17.1888C14.1604 17.1888 13.8258 17.5234 13.8258 17.9362V18.6835C13.8258 19.0963 13.4912 19.4309 13.0785 19.4309H5.2314C4.81866 19.4309 4.48406 19.0963 4.48406 18.6835V5.2314C4.48406 4.81866 4.81866 4.48406 5.2314 4.48406H13.0785C13.4912 4.48406 13.8258 4.81866 13.8258 5.2314V5.97874C13.8258 6.39149 14.1604 6.72608 14.5732 6.72608C14.9859 6.72608 15.3205 6.39149 15.3205 5.97874V5.2314C15.3205 3.99317 14.3167 2.98938 13.0785 2.98938H5.2314Z" fill="currentColor"/>
+                            <path d="M10.9593 9.52668C11.2678 9.25247 11.2956 8.78009 11.0214 8.47161C10.7471 8.16312 10.2748 8.13533 9.96629 8.40954L5.97486 11.9575L9.96629 15.5054C10.2748 15.7796 10.7471 15.7518 11.0214 15.4433C11.2956 15.1349 11.2678 14.6625 10.9593 14.3883L9.06542 12.7048H18.6835C19.0963 12.7048 19.4309 12.3702 19.4309 11.9575C19.4309 11.5447 19.0963 11.2101 18.6835 11.2101H9.06542L10.9593 9.52668Z" fill="currentColor"/>
+                        </svg>
+                        <p class="">Logout</p>
+                    </a>
+
+                    <!-- Notification -->
+                    <a href="#" class="flex items-center justify-center space-x-2 h-12 rounded-full text-sm md:text-base font-bold text-purple-600 hover:text-purple-600 transform active:scale-95 duration-100">
+                        <span class="hidden md:inline-block">Notification</span> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 text-yellow-600 hover:text-purple-600 w-4 h-5 md:w-6 md:h-7" viewBox="0 0 24 28" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.875 2.01281C13.875 2.05985 13.873 2.10645 13.8692 2.15256C19.074 2.97563 20.9921 7.33519 20.9921 12.5897C20.9921 14.9272 21.305 18.4303 22.2543 20.1051L23.1219 21.6358C23.5205 22.3391 22.9408 23.1665 22.0495 23.1665H1.95049C1.05922 23.1665 0.479534 22.3391 0.878122 21.6358L1.74569 20.1051C3.1001 17.7155 3.07562 16.511 3.02825 14.1806C3.01856 13.704 3.00792 13.1803 3.00792 12.5897C3.00792 7.33519 4.92596 2.97563 10.1308 2.15256C10.127 2.10645 10.125 2.05985 10.125 2.01281C10.125 1.03924 10.9645 0.25 12 0.25C13.0355 0.25 13.875 1.03924 13.875 2.01281ZM10.5213 4.62188L12 4.38805L13.4787 4.62188C15.3667 4.92043 16.5059 5.79641 17.2492 7.0128C18.053 8.32837 18.4921 10.2221 18.4921 12.5897C18.4921 13.8543 18.5758 15.4348 18.7924 16.9497C18.9631 18.1436 19.2438 19.5116 19.7464 20.6665H4.28363C4.84329 19.5755 5.19175 18.5912 5.3746 17.5551C5.57491 16.42 5.55224 15.3194 5.53014 14.2472L5.52774 14.1298C5.51802 13.6519 5.50792 13.1517 5.50792 12.5897C5.50792 10.2221 5.94702 8.32837 6.75085 7.0128C7.49408 5.79641 8.63332 4.92043 10.5213 4.62188Z" fill="currentColor"/>
+                            <path d="M11.9996 27.7508C13.5529 27.7508 14.8121 26.4557 14.8121 24.858C14.8121 24.6406 14.7888 24.4289 14.7446 24.2252H9.25461C9.21043 24.4289 9.18712 24.6406 9.18712 24.858C9.18712 26.4557 10.4463 27.7508 11.9996 27.7508Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+
+                    <!-- Mobile menu -->
+                    <a href="#" class="xl:hidden flex items-center text-purple-600">
+                        <p>menu</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="" width="20" height="20" viewBox="0 0 40 40" fill="none">
+                            <path d="M17.5 10C17.5 8.61929 18.6193 7.5 20 7.5C21.3807 7.5 22.5 8.61929 22.5 10C22.5 11.3807 21.3807 12.5 20 12.5C18.6193 12.5 17.5 11.3807 17.5 10Z" fill="currentColor"/>
+                            <path d="M17.5 20C17.5 18.6193 18.6193 17.5 20 17.5C21.3807 17.5 22.5 18.6193 22.5 20C22.5 21.3807 21.3807 22.5 20 22.5C18.6193 22.5 17.5 21.3807 17.5 20Z" fill="currentColor"/>
+                            <path d="M20 27.5C18.6193 27.5 17.5 28.6193 17.5 30C17.5 31.3807 18.6193 32.5 20 32.5C21.3807 32.5 22.5 31.3807 22.5 30C22.5 28.6193 21.3807 27.5 20 27.5Z" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    
+
+                </div>
+    
+            </nav>
+        </div>
+    </div>
+
+    <!-- Create post -->
+    <section class="relative mt-14">
+        <div class="relative container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32">
+
+            <div class="flex items-baseline justify-between pb-11 border-b border-gray-150 mt-9">
+
+                <!-- Title -->
+                <div class="flex items-center">
+                    <h2 class="text-4xl text-purple-600">Create a post</h2>
+                    <img src="./img/screamboto-big.png" alt="screambot-big" class="w-8 h-8 ml-4">
+                </div>
+
+                <!-- Drafts -->
+                <p class="text-purple-600 text-base font-bold">
+                    Drafts
+                    <span class="text-yellow-600">0</span>
+                </p>
+
+                
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-between space-y-10 lg:space-y-0 space-x-0 lg:space-x-6 mt-9">
+
+                <!-- Textarea -->
+                <div class="relative bg-white shadow-xl rounded-lg w-textarea">
+                    <form action="" class="relative p-1">
+                        
+                        <!-- Text edit section -->
+                        <div class="flex items-center justify-between py-4 md:py-5 px-2 md:px-9 space-x-4 overflow-x-scroll lg:overflow-x-auto">
+
+                            <!-- Bold -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15.25 11.8C15.7397 11.5018 16.1529 11.0934 16.4567 10.6073C16.7605 10.1212 16.9466 9.57077 17 9C17.0093 8.48388 16.9168 7.971 16.7278 7.49063C16.5388 7.01027 16.2571 6.57184 15.8986 6.20039C15.5402 5.82894 15.1121 5.53174 14.6387 5.32578C14.1654 5.11981 13.6561 5.00911 13.14 5H6.65002V19H13.65C14.1412 18.9948 14.6265 18.8929 15.0782 18.7001C15.53 18.5073 15.9394 18.2274 16.283 17.8764C16.6265 17.5253 16.8976 17.1101 17.0807 16.6543C17.2638 16.1985 17.3553 15.7112 17.35 15.22V15.1C17.3504 14.4071 17.1529 13.7285 16.781 13.144C16.409 12.5594 15.8778 12.0931 15.25 11.8ZM8.65002 7H12.85C13.2762 6.98681 13.6962 7.10428 14.0537 7.33665C14.4112 7.56902 14.6891 7.90517 14.85 8.3C15.0129 8.82779 14.9602 9.39859 14.7035 9.88765C14.4468 10.3767 14.0069 10.7443 13.48 10.91C13.2754 10.97 13.0632 11.0003 12.85 11H8.65002V7ZM13.25 17H8.65002V13H13.25C13.6762 12.9868 14.0962 13.1043 14.4537 13.3367C14.8112 13.569 15.0891 13.9052 15.25 14.3C15.4129 14.8278 15.3602 15.3986 15.1035 15.8877C14.8468 16.3767 14.4069 16.7443 13.88 16.91C13.6754 16.97 13.4632 17.0003 13.25 17Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Italic -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M11.76 9H13.76L11.56 19H9.56L11.76 9ZM13.44 5C13.2422 5 13.0489 5.05865 12.8844 5.16853C12.72 5.27841 12.5918 5.43459 12.5161 5.61732C12.4404 5.80004 12.4206 6.00111 12.4592 6.19509C12.4978 6.38907 12.593 6.56725 12.7329 6.70711C12.8727 6.84696 13.0509 6.9422 13.2449 6.98079C13.4389 7.01937 13.64 6.99957 13.8227 6.92388C14.0054 6.84819 14.1616 6.72002 14.2715 6.55557C14.3813 6.39112 14.44 6.19778 14.44 6C14.44 5.73478 14.3346 5.48043 14.1471 5.29289C13.9596 5.10536 13.7052 5 13.44 5Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Underline -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19 20V22H5V20H19ZM16 13.215C15.9671 13.875 15.7711 14.5165 15.4297 15.0823C15.0883 15.6481 14.6121 16.1205 14.0435 16.4572C13.475 16.794 12.8318 16.9847 12.1716 17.0122C11.5114 17.0397 10.8546 16.9033 10.26 16.615C9.57464 16.3185 8.99341 15.8241 8.59077 15.1952C8.18813 14.5663 7.98242 13.8315 8 13.085V5.005H6V13.215C6.03383 14.1564 6.28885 15.0766 6.74442 15.9012C7.19998 16.7257 7.84329 17.4314 8.62227 17.9611C9.40125 18.4908 10.294 18.8296 11.2283 18.9502C12.1625 19.0707 13.1121 18.9696 14 18.655C15.1811 18.2613 16.2059 17.5012 16.9252 16.485C17.6446 15.4689 18.0211 14.2498 18 13.005V5.005H16V13.215ZM16 5H18H16ZM8 5H6H8Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Strike trough -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 12.2029H21V13.7029H16.6342C16.8711 14.2002 16.9906 14.7451 16.9836 15.2958C16.9977 15.8183 16.8855 16.3365 16.6567 16.8064C16.428 17.2764 16.0893 17.6843 15.6694 17.9955C14.6579 18.7072 13.4378 19.0607 12.2025 19C11.3 19.0061 10.4062 18.8224 9.57916 18.461C8.82387 18.1477 8.16917 17.6329 7.68652 16.9728C7.24212 16.3426 7.00762 15.5884 7.01636 14.8174V14.704H7.30359V14.7029H7.64508V14.704H9.02V14.8173C9.00433 15.1687 9.07382 15.5187 9.22253 15.8374C9.37125 16.1562 9.59479 16.4343 9.87413 16.648C10.5515 17.1303 11.372 17.3697 12.2025 17.3273C12.9356 17.3752 13.6645 17.1835 14.2792 16.7811C14.507 16.6126 14.6901 16.3908 14.8124 16.1351C14.9346 15.8794 14.9923 15.5977 14.9804 15.3145C14.9964 15.041 14.9459 14.7676 14.8332 14.5178C14.7205 14.268 14.5491 14.0493 14.3335 13.8801C14.2451 13.8161 14.1533 13.7569 14.0585 13.7029H3V12.2029ZM16.3447 7.0598C15.9232 6.40481 15.3271 5.88058 14.6236 5.54619C13.8394 5.1726 12.9793 4.98565 12.1107 4.99999C10.8996 4.94801 9.70883 5.32403 8.74719 6.06212C8.33435 6.38097 8.00134 6.79147 7.77448 7.26119C7.54762 7.73091 7.43313 8.24695 7.44006 8.76854C7.43656 9.26283 7.54659 9.75133 7.76166 10.1964H10.3583C10.275 10.1427 10.173 10.0906 10.1056 10.0358C9.90219 9.88567 9.73702 9.68968 9.62358 9.46372C9.51014 9.23777 9.45164 8.98823 9.45282 8.7354C9.43773 8.44679 9.49242 8.15879 9.61226 7.8958C9.73209 7.63282 9.91354 7.40258 10.1412 7.2246C10.7173 6.82506 11.4109 6.63053 12.1107 6.67217C12.8717 6.62379 13.6231 6.86239 14.2167 7.34087C14.465 7.57466 14.6594 7.85967 14.7865 8.17612C14.9136 8.49257 14.9703 8.83288 14.9527 9.17345V9.28686H16.9559V9.17345C16.9592 8.42485 16.7471 7.69109 16.3447 7.0598Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Smile -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M11.991 3.00001C10.2114 3.00179 8.47218 3.53114 6.99333 4.52116C5.51447 5.51117 4.36232 6.9174 3.68251 8.56209C3.0027 10.2068 2.82575 12.0161 3.17404 13.7613C3.52232 15.5066 4.38019 17.1094 5.63922 18.3671C6.89825 19.6249 8.50192 20.4812 10.2475 20.8277C11.9931 21.1743 13.8022 20.9955 15.4462 20.3141C17.0902 19.6326 18.4953 18.4791 19.4839 16.9992C20.4724 15.5194 21 13.7797 21 12C21.0006 10.8172 20.7679 9.64587 20.3152 8.55309C19.8626 7.46031 19.1989 6.46752 18.3621 5.63156C17.5253 4.7956 16.5318 4.13288 15.4386 3.68132C14.3454 3.22976 13.1738 2.99824 11.991 3.00001ZM12 19C10.6155 19 9.26216 18.5895 8.11101 17.8203C6.95987 17.0511 6.06266 15.9579 5.53285 14.6788C5.00303 13.3997 4.86441 11.9922 5.13451 10.6344C5.4046 9.27651 6.07129 8.02923 7.05026 7.05026C8.02922 6.07129 9.2765 5.40461 10.6344 5.13451C11.9922 4.86442 13.3997 5.00304 14.6788 5.53285C15.9579 6.06267 17.0511 6.95987 17.8203 8.11102C18.5895 9.26216 19 10.6155 19 12C19.0003 12.9193 18.8194 13.8297 18.4677 14.6791C18.116 15.5285 17.6004 16.3003 16.9503 16.9503C16.3003 17.6004 15.5285 18.116 14.6791 18.4677C13.8297 18.8194 12.9193 19.0003 12 19ZM15.105 13.8H16.608C16.2464 14.728 15.6131 15.5252 14.7909 16.0873C13.9687 16.6493 12.996 16.95 12 16.95C11.0041 16.95 10.0313 16.6493 9.20912 16.0873C8.38692 15.5252 7.75358 14.728 7.392 13.8H8.895C9.20819 14.3469 9.66027 14.8014 10.2055 15.1175C10.7507 15.4335 11.3698 15.6 12 15.6C12.6302 15.6 13.2493 15.4335 13.7945 15.1175C14.3397 14.8014 14.7918 14.3469 15.105 13.8ZM7.5 9.75001C7.5 9.48301 7.57918 9.222 7.72752 8.99999C7.87586 8.77798 8.0867 8.60495 8.33338 8.50277C8.58006 8.40059 8.8515 8.37386 9.11338 8.42595C9.37525 8.47804 9.6158 8.60661 9.8046 8.79542C9.9934 8.98422 10.122 9.22476 10.1741 9.48664C10.2262 9.74851 10.1994 10.02 10.0972 10.2666C9.99506 10.5133 9.82203 10.7242 9.60002 10.8725C9.37802 11.0208 9.11701 11.1 8.85 11.1C8.49196 11.1 8.14858 10.9578 7.89541 10.7046C7.64224 10.4514 7.5 10.1081 7.5 9.75001ZM13.8 9.75001C13.8 9.48301 13.8792 9.222 14.0275 8.99999C14.1759 8.77798 14.3867 8.60495 14.6334 8.50277C14.8801 8.40059 15.1515 8.37386 15.4134 8.42595C15.6753 8.47804 15.9158 8.60661 16.1046 8.79542C16.2934 8.98422 16.422 9.22476 16.4741 9.48664C16.5262 9.74851 16.4994 10.02 16.3972 10.2666C16.2951 10.5133 16.122 10.7242 15.9 10.8725C15.678 11.0208 15.417 11.1 15.15 11.1C14.792 11.1 14.4486 10.9578 14.1954 10.7046C13.9422 10.4514 13.8 10.1081 13.8 9.75001Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown number -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M11.991 3.00001C10.2114 3.00179 8.47218 3.53114 6.99333 4.52116C5.51447 5.51117 4.36232 6.9174 3.68251 8.56209C3.0027 10.2068 2.82575 12.0161 3.17404 13.7613C3.52232 15.5066 4.38019 17.1094 5.63922 18.3671C6.89825 19.6249 8.50192 20.4812 10.2475 20.8277C11.9931 21.1743 13.8022 20.9955 15.4462 20.3141C17.0902 19.6326 18.4953 18.4791 19.4839 16.9992C20.4724 15.5194 21 13.7797 21 12C21.0006 10.8172 20.7679 9.64587 20.3152 8.55309C19.8626 7.46031 19.1989 6.46752 18.3621 5.63156C17.5253 4.7956 16.5318 4.13288 15.4386 3.68132C14.3454 3.22976 13.1738 2.99824 11.991 3.00001ZM12 19C10.6155 19 9.26216 18.5895 8.11101 17.8203C6.95987 17.0511 6.06266 15.9579 5.53285 14.6788C5.00303 13.3997 4.86441 11.9922 5.13451 10.6344C5.4046 9.27651 6.07129 8.02923 7.05026 7.05026C8.02922 6.07129 9.2765 5.40461 10.6344 5.13451C11.9922 4.86442 13.3997 5.00304 14.6788 5.53285C15.9579 6.06267 17.0511 6.95987 17.8203 8.11102C18.5895 9.26216 19 10.6155 19 12C19.0003 12.9193 18.8194 13.8297 18.4677 14.6791C18.116 15.5285 17.6004 16.3003 16.9503 16.9503C16.3003 17.6004 15.5285 18.116 14.6791 18.4677C13.8297 18.8194 12.9193 19.0003 12 19ZM15.105 13.8H16.608C16.2464 14.728 15.6131 15.5252 14.7909 16.0873C13.9687 16.6493 12.996 16.95 12 16.95C11.0041 16.95 10.0313 16.6493 9.20912 16.0873C8.38692 15.5252 7.75358 14.728 7.392 13.8H8.895C9.20819 14.3469 9.66027 14.8014 10.2055 15.1175C10.7507 15.4335 11.3698 15.6 12 15.6C12.6302 15.6 13.2493 15.4335 13.7945 15.1175C14.3397 14.8014 14.7918 14.3469 15.105 13.8ZM7.5 9.75001C7.5 9.48301 7.57918 9.222 7.72752 8.99999C7.87586 8.77798 8.0867 8.60495 8.33338 8.50277C8.58006 8.40059 8.8515 8.37386 9.11338 8.42595C9.37525 8.47804 9.6158 8.60661 9.8046 8.79542C9.9934 8.98422 10.122 9.22476 10.1741 9.48664C10.2262 9.74851 10.1994 10.02 10.0972 10.2666C9.99506 10.5133 9.82203 10.7242 9.60002 10.8725C9.37802 11.0208 9.11701 11.1 8.85 11.1C8.49196 11.1 8.14858 10.9578 7.89541 10.7046C7.64224 10.4514 7.5 10.1081 7.5 9.75001ZM13.8 9.75001C13.8 9.48301 13.8792 9.222 14.0275 8.99999C14.1759 8.77798 14.3867 8.60495 14.6334 8.50277C14.8801 8.40059 15.1515 8.37386 15.4134 8.42595C15.6753 8.47804 15.9158 8.60661 16.1046 8.79542C16.2934 8.98422 16.422 9.22476 16.4741 9.48664C16.5262 9.74851 16.4994 10.02 16.3972 10.2666C16.2951 10.5133 16.122 10.7242 15.9 10.8725C15.678 11.0208 15.417 11.1 15.15 11.1C14.792 11.1 14.4486 10.9578 14.1954 10.7046C13.9422 10.4514 13.8 10.1081 13.8 9.75001Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Dropdown dotted -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 10.5C3.2 10.5 2.5 11.2 2.5 12C2.5 12.8 3.2 13.5 4 13.5C4.8 13.5 5.5 12.8 5.5 12C5.5 11.2 4.8 10.5 4 10.5ZM4 5.5C3.2 5.5 2.5 6.2 2.5 7C2.5 7.8 3.2 8.5 4 8.5C4.8 8.5 5.5 7.8 5.5 7C5.5 6.2 4.8 5.5 4 5.5ZM4 15.5C3.2 15.5 2.5 16.2 2.5 17C2.5 17.8 3.2 18.5 4 18.5C4.8 18.5 5.5 17.8 5.5 17C5.5 16.2 4.8 15.5 4 15.5ZM7.5 6V8H21.5V6H7.5ZM7.5 18H21.5V16H7.5V18ZM7.5 13H21.5V11H7.5V13Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Image -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M14.2 11L18 16H6L9 12.1L11.1 14.8L14 11H14.2ZM8.5 11C9.3 11 10 10.3 10 9.5C10 8.7 9.3 8 8.5 8C7.7 8 7 8.7 7 9.5C7 10.3 7.7 11 8.5 11ZM22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4H20C21.1 4 22 4.9 22 6ZM20 8.8V6H4V18H20V8.8Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Link -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M11 17H7C5.67392 17 4.40215 16.4732 3.46447 15.5355C2.52678 14.5979 2 13.3261 2 12C2 10.6739 2.52678 9.40215 3.46447 8.46447C4.40215 7.52678 5.67392 7 7 7H11V9H7C6.20435 9 5.44129 9.31607 4.87868 9.87868C4.31607 10.4413 4 11.2044 4 12C4 12.7956 4.31607 13.5587 4.87868 14.1213C5.44129 14.6839 6.20435 15 7 15H11V17ZM17 7H13V9H17C17.7956 9 18.5587 9.31607 19.1213 9.87868C19.6839 10.4413 20 11.2044 20 12C20 12.7956 19.6839 13.5587 19.1213 14.1213C18.5587 14.6839 17.7956 15 17 15H13V17H17C18.3261 17 19.5979 16.4732 20.5355 15.5355C21.4732 14.5979 22 13.3261 22 12C22 10.6739 21.4732 9.40215 20.5355 8.46447C19.5979 7.52678 18.3261 7 17 7ZM16 11H8V13H16V11Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Video -->
+                            <button class="text-black hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 8V16H5V8H15ZM17 10.5V7C17 6.73478 16.8946 6.48043 16.7071 6.29289C16.5196 6.10536 16.2652 6 16 6H4C3.73478 6 3.48043 6.10536 3.29289 6.29289C3.10536 6.48043 3 6.73478 3 7V17C3 17.2652 3.10536 17.5196 3.29289 17.7071C3.48043 17.8946 3.73478 18 4 18H16C16.2652 18 16.5196 17.8946 16.7071 17.7071C16.8946 17.5196 17 17.2652 17 17V13.5L19.29 15.79C19.4299 15.931 19.6086 16.0272 19.8033 16.0663C19.9981 16.1054 20.2 16.0855 20.3835 16.0094C20.5669 15.9332 20.7235 15.8041 20.8333 15.6386C20.9431 15.4731 21.0012 15.2786 21 15.08V8.91C21.0012 8.71138 20.9431 8.51691 20.8333 8.35139C20.7235 8.18587 20.5669 8.0568 20.3835 7.98063C20.2 7.90446 19.9981 7.88465 19.8033 7.92372C19.6086 7.96279 19.4299 8.05897 19.29 8.2L17 10.5Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+
+                            <!-- Undo -->
+                            <button class="text-gray-400 hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g>
+                                    <path d="M10.4 9.4C8.7 9.7 7.2 10.3 5.8 11.4L3 8.5V15.5H10L7.3 12.8C11 10.2 16.1 11 18.8 14.7C19 15 19.2 15.2 19.3 15.5L21.1 14.6C18.9 10.8 14.7 8.7 10.4 9.4Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+
+                            <!-- Redo -->
+                            <button class="text-gray-400 hover:text-purple-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <g>
+                                    <path d="M13.6 9.4C15.3 9.7 16.8 10.3 18.2 11.4L21 8.5V15.5H14L16.7 12.8C13 10.1 7.9 11 5.3 14.7C5.1 15 4.9 15.2 4.8 15.5L3 14.6C5.1 10.8 9.3 8.7 13.6 9.4Z" fill="currentColor"/>
+                                    </g>
+                                </svg>
+                            </button>
+                            
+                        </div>
+
+                        <!-- Post text -->
+                        <textarea name="" id="" cols="30" rows="10" class="w-full h-full pl-2 md:pl-6 pt-5 outline-white text-xl placeholder-gray-200" placeholder="Text (optional)"></textarea>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-col md:flex-row items-center justify-end my-4 space-y-3 md:space-y-0">
+                            
+                            <!-- Draft -->
+                            <button class="w-full md:w-226 h-50 mr-4 border-2 border-yellow-600 rounded-lg font-bold text-yellow-600 bg-white hover:bg-purple-600">Save as draft</button>
+                            
+                            <!-- Post -->
+                            <button class="w-full md:w-226 h-50 mr-4 flex items-center justify-center border-2 border-yellow-600 rounded-lg font-bold text-yellow-600 bg-purple-600 hover:bg-yellow-600 hover:border-purple-600 hover:text-purple-600">
+                                <img src="./img/partyboto.png" alt="" class="pb-1 mr-2">
+                                Post
+
+                            </button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Rules -->
+                <div class="w-full lg:w-366 flex flex-col md:flex-row lg:flex-col items-center space-x-0 md:space-x-10 lg:space-x-0 bg-white shadow-xl rounded-lg px-5 pt-5 pb-12">
+
+                    <!-- User name -->
+                    <div class="">
+                        <div class="w-20 h-20 mx-auto flex items-center justify-center bg-white shadow-lg rounded-full">
+                            <img src="./img/near_logo_stack 2.png" alt="" class="">
+                        </div>
+                        <p class="mt-3 text-center text-yellow-600 text-xl font-bold">oliinykk.near</p>
+
+                    </div>
+
+                    <!-- Rules -->
+                    <div class="w-full mt-3">
+
+                        <!-- #1 -->
+                        <div class="w-full border-b border-gray-150 px-1 py-3">
+                            <p class="text-base font-bold">1. Remember the human</p>
+                        </div>
+
+                        <!-- #2 -->
+                        <div class="w-full border-b border-gray-150 px-1 py-3">
+                            <p class="text-base font-bold">2. Behave like you would in real life</p>
+                        </div>
+
+                        <!-- #3 -->
+                        <div class="w-full border-b border-gray-150 px-1 py-3">
+                            <p class="text-base font-bold">3. Look for the original source of content</p>
+                        </div>
+
+                        <!-- #4 -->
+                        <div class="w-full border-b border-gray-150 px-1 py-3">
+                            <p class="text-base font-bold">4. Search for duplicates before posting</p>
+                        </div>
+
+                        <!-- #5 -->
+                        <div class="w-full border-b border-gray-150 px-1 py-3">
+                            <p class="text-base font-bold">5. Read the community’s rules</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-near-100">
+        <div class="container mx-auto px-4 md:px-10 lg:px-16 2xl:px-32 mt-20">
+            <div class="flex flex-col md:flex-row">
+
+                <div class="flex flex-col">
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center">
+                        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600">
+                            <img src="./img/NEAR.png" alt="">
+                        </div>
+                        <span class="mx-2 h-9 w-0.5 bg-black"></span>
+                        <p class="text-black text-xl font-bold mali">Discuss</p>
+                    </a>
+                    <a href="#" class="mt-1">
+                        info@neardiscuss
+                    </a>
+                    <a href="#" class="mt-1">
+                        1-232-3434 (Main)
+                    </a>
+                </div>
+
+                <div class="w-auto md:ml-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-14 lg:gap-x-28 xl:gap-x-40 gap-y-10">
+                    <!-- About -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">About</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="./alert-successful.html" class="hover:text-black font-medium">About contract</a></li>
+                        <li><a href="./alert-failed.html" class="hover:text-black font-medium">About NEAR </a></li>
+                        <li><a href="" class="hover:text-black font-medium">About NEAR ecosystem</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">Community</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="" class="hover:text-black font-medium">Community OS Wiki</a></li>
+                        <li><a href="" class="hover:text-black font-medium">Forum</a></li>
+                        <li><a href="" class="hover:text-black font-medium">Events</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help -->
+                <div class="">
+                    <p class="text-2xl font-bold mt-2">Help</p>
+                    <ul class="mt-4 space-y-2 text-gray-600">
+                        <li><a href="" class="hover:text-black font-medium">Support</a></li>
+                        <li><a href="" class="hover:text-black font-medium">info@neardiscuss</a></li>
+                        <li><a href="" class="hover:text-black font-medium">1-232-3434 (Main)</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+            <div class="flex justify-center my-10">
+                <p class="">© 2021 NEAR Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

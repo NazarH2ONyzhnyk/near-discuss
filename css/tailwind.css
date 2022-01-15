@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Mali:wght@400;700&family=Yeseva+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    p, a {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Yeseva One', cursive;
+    }
+    .mali {
+        font-family: 'Mali', cursive;
+    }
+    .post-shadow {
+        box-shadow: 4px 5px 20px rgba(74, 105, 165, 0.16);
+    }
+    
+    .text-xxs {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .w-textarea {
+        width: 100%;
+    }
+    .post-blur {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(12px);
+    }
+    @screen lg {
+        .w-textarea {
+            width: 514px;
+        }
+
+    }
+    @screen xl {
+        .w-textarea {
+            width: 756px;
+        }
+
+    }
+    @screen 2xl {
+        .w-textarea {
+            width: 880px;
+        }
+
+    }
+}
